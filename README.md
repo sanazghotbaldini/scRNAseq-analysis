@@ -33,9 +33,10 @@ UCell, fgsea, ComplexHeatmap, ggplot2
 ```
 
 ## Cell Types Analyzed
-Immune, stromal, and epithelial compartments including major and 
-rare cell populations identified via unsupervised clustering and 
-marker-based annotation.
+Cell identities were assigned through a two-stage pipeline:
+1. **Clustering** — Graph-based clustering visualised in UMAP space
+2. **Annotation** — Automated labelling via SingleR (cancer-specific reference), 
+   refined using `FindAllMarkers` (Wilcoxon rank-sum) and canonical marker validation
 
 ## Note
 Raw data not included. Analysis begins from post-CellRanger count matrices.
